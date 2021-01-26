@@ -26,6 +26,12 @@ namespace VegeBioFinal.Data
                 new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
                 new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
                 new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
                 new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
             };
 
