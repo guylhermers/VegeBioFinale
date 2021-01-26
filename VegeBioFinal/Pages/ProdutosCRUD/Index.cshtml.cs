@@ -15,6 +15,7 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
         private readonly VegeBioFinal.Data.VegeBioFinalContext _context;
 
         public Produto produto { get; set; }
+        
         public Cabaz cabazprodutos { get; set; }
 
         public int Quantidade { get; set; }
@@ -33,7 +34,7 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
         public IActionResult OnPost()
         {
             cabazprodutos.adicionarProduto(produto, Quantidade);
-            return Page();
+                  return Page();
         }
     }
 }
