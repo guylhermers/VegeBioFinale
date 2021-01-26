@@ -11,10 +11,10 @@
     <ul id="products" data-role="listview" data-inset="true">
         @foreach (var product in Model.Produto)
         {
-            <li class="product">
-        
-                    <img class="product-image" src="~/images/@product.imageurl" alt="Imagem do @product.nome" />
-                    <form method="post">
+            <li class="product"> 
+                    <img class="product-image" src="~/images/@product.imageurl" alt="Imagem do @product.nome" />      
+                <form method="post">
+                    <input type="text" asp-for="produto.id" placeholder="Insira o numero presente na imagem">
                     <input type="number" asp-for="Quantidade" placeholder="Quantidade" />
                     <button type="submit">Adicionar ao cabaz</button>
                 </form>
