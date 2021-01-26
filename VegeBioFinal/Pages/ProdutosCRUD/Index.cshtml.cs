@@ -15,6 +15,9 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
         private readonly VegeBioFinal.Data.VegeBioFinalContext _context;
 
         public Produto produto { get; set; }
+        public Cabaz cabazprodutos { get; set; }
+
+        public int Quantidade { get; set; }
         public IndexModel(VegeBioFinal.Data.VegeBioFinalContext context)
         {
             _context = context;
@@ -25,6 +28,12 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
         public async Task OnGetAsync()
         {
             Produto = await _context.Produto.ToListAsync();
+        }
+
+        public IActionResult OnPost()
+        {
+            cabazprodutos.adicionarProduto(produto, Quantidade);
+            return Page();
         }
     }
 }

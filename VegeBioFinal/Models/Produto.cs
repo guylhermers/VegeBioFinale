@@ -30,5 +30,11 @@ namespace VegeBioFinal.Models
 
         public string imageurl { get; set; }
 
+ 
+
     }
+
+   
+
+
 }
