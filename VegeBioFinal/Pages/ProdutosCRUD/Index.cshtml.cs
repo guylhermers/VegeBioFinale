@@ -14,10 +14,11 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
     {
         private readonly VegeBioFinal.Data.VegeBioFinalContext _context;
 
+        [BindProperty]
         public Produto produto { get; set; }
         public Cabaz cabazprodutos { get; set; }
-
         public int Quantidade { get; set; }
+
         public IndexModel(VegeBioFinal.Data.VegeBioFinalContext context)
         {
             _context = context;
@@ -25,14 +26,28 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
 
         public IList<Produto> Produto { get;set; }
 
+        public ListaProdutos Lista { get; set; }
+
         public async Task OnGetAsync()
         {
+
             Produto = await _context.Produto.ToListAsync();
+
+            foreach (var p in Produto)
+            {
+                Lista.adicionarProduto(p);
+            }
         }
 
         public IActionResult OnPost()
         {
-            cabazprodutos.adicionarProduto(produto, Quantidade);
+            foreach (Produto p in Lista.ListaProduto)
+            {
+                if(p.id == produto.id)
+                {
+                    cabazprodutos.adicionarProduto(produto, Quantidade);
+                }
+            }
             return Page();
         }
     }
