@@ -14,6 +14,7 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
     {
         private readonly VegeBioFinal.Data.VegeBioFinalContext _context;
 
+        public Produto produto { get; set; }
         public IndexModel(VegeBioFinal.Data.VegeBioFinalContext context)
         {
             _context = context;
