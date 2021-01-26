@@ -1,0 +1,45 @@
+﻿@page
+@model VegeBioFinal.Pages.CabazCRUD.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Cabaz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Cabaz.id" />
+            <div class="form-group">
+                <label asp-for="Cabaz.preco_cabaz" class="control-label"></label>
+                <input asp-for="Cabaz.preco_cabaz" class="form-control" />
+                <span asp-validation-for="Cabaz.preco_cabaz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cabaz.idCliente" class="control-label"></label>
+                <input asp-for="Cabaz.idCliente" class="form-control" />
+                <span asp-validation-for="Cabaz.idCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cabaz.epoca_atual" class="control-label"></label>
+                <input asp-for="Cabaz.epoca_atual" class="form-control" />
+                <span asp-validation-for="Cabaz.epoca_atual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
