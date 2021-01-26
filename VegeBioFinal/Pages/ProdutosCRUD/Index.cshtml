@@ -9,17 +9,61 @@
     <ul id="products" data-role="listview" data-inset="true">
         @foreach (var product in Model.Produto)
         {
-            <li class="product">
-                <a href="~/order/@product.id" title="Encomendar @product.nome">
-                    <img class="product-image" src="~/images/@product.imageurl" alt="Imagem do @product.nome" />
-                </a>
-                <form method="post">
-                    <input type="number" asp-for="produto.quantidade" placeholder="Quantidade" />
-                    <button type="submit">Adicionar ao cabaz</button>
-                </form>
-                <p class="price">@string.Format("{0:C}", product.preco)</p>
-                <p class="description">@product.descricao</p>
-            </li>
+        <li class="product">
+            <a href="~/order/@product.id" title="Encomendar @product.nome">
+                <img class="product-image" src="~/images/@product.imageurl" alt="Imagem do @product.nome" />
+            </a>
+            <form method="post">
+                <input type="number" asp-for="produto.quantidade" placeholder="Quantidade" />
+                <button type="submit">Adicionar ao cabaz</button>
+            </form>
+            <p class="price">@string.Format("{0:C}", product.preco)</p>
+            <p class="priceTotal">@string.Format("{0:C}", product.preco)</p>
+            <p class="description">@product.descricao</p>
+        </li>
         }
     </ul>
 </div>
+
+<style>
+    #products {
+        list-style: none;
+    }
+
+    .product {
+        float: left;
+        margin: 10px 12px;
+        width: 215px;
+    }
+
+    .product-image {
+        background-color: #edece8;
+        border: 1px #e6e3d8 solid;
+        height: 200px;
+        margin: 0 0 7px 0;
+        padding: 6px;
+        width: 200px;
+    }
+</style>
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+        $(function() {
+            var price = parseFloat($("#price").text()).toFixed(2),
+                total = $("#priceTotal"),
+                orderQty = $("#OrderQty");
+            orderQty.change(function () {
+                var quantity = parseInt(orderQty.val());
+                if (!quantity || quantity < 1) {
+                    orderQty.val(1);
+                    quantity = 1;
+                } else if (quantity.toString() !== orderQty.val()) {
+                    orderQty.val(quantity)
+                }
+                total.text((price * quantity.toFixed(2)) + "€");
+            })
+        })
+    </script>
+}

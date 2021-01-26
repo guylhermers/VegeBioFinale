@@ -16,12 +16,12 @@ namespace VegeBioFinal.Data
 
         public DbSet<VegeBioFinal.Models.Produto> Produto { get; set; }
         public DbSet<VegeBioFinal.Models.Cabaz> Cabaz { get; set; }
+        public DbSet<VegeBioFinal.Models.Cliente> Cliente { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Produto>().ToTable("Product");
+            modelBuilder.Entity<Cliente>().ToTable("Cliente");
         }
-
-        public DbSet<VegeBioFinal.Models.Cliente> Cliente { get; set; }
     }
 }
