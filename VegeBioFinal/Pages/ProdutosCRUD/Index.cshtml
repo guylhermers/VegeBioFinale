@@ -14,7 +14,7 @@
             <li class="product"> 
                     <img class="product-image" src="~/images/@product.imageurl" alt="Imagem do @product.nome" />      
                 <form method="post">
-                    <input type="text" asp-for="produto.id" placeholder="Insira o numero presente na imagem">
+                    <input type="hidden" asp-for="produto.id" value="@product.id" />
                     <input type="number" asp-for="Quantidade" placeholder="Quantidade" />
                     <button type="submit">Adicionar ao cabaz</button>
                 </form>

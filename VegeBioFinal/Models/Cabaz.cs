@@ -18,8 +18,6 @@ namespace VegeBioFinal.Models
 
         public int idCliente { get; set; }
 
-        public DateTime dataEntrega { get; set; }
-
         public string epoca_atual { get; set; }
 
         public Cabaz()

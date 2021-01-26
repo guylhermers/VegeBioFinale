@@ -16,7 +16,6 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
 
         [BindProperty]
         public Produto produto { get; set; }
-        
         public Cabaz cabazprodutos { get; set; }
         public int Quantidade { get; set; }
 
@@ -27,34 +26,23 @@ namespace VegeBioFinal.Pages.ProdutosCRUD
 
         public IList<Produto> Produto { get;set; }
 
-        public ListaProdutos Lista { get; set; }
-
         public async Task OnGetAsync()
         {
 
             Produto = await _context.Produto.ToListAsync();
 
-            foreach (var p in Produto)
-            {
-                Lista.adicionarProduto(p);
-            }
         }
 
         public IActionResult OnPost()
         {
-<<<<<<< HEAD
-            cabazprodutos.adicionarProduto(produto, Quantidade);
-                  return Page();
-=======
-            foreach (Produto p in Lista.ListaProduto)
+            foreach (Produto p in Produto)
             {
                 if(p.id == produto.id)
                 {
-                    cabazprodutos.adicionarProduto(produto, Quantidade);
+                    cabazprodutos.adicionarProduto(p, Quantidade);
                 }
             }
             return Page();
->>>>>>> 8f817d7c7b4c325535ab23c771f0d0c3ce5bef20
         }
     }
 }
