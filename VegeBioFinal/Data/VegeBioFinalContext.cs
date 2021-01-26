@@ -21,5 +21,7 @@ namespace VegeBioFinal.Data
         {
             modelBuilder.Entity<Produto>().ToTable("Product");
         }
+
+        public DbSet<VegeBioFinal.Models.Cliente> Cliente { get; set; }
     }
 }

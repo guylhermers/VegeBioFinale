@@ -19,13 +19,13 @@ namespace VegeBioFinal.Data
 
             var produtos = new Produto[]
             {
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
-                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
+                new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"},
                 new Produto{nome = "produto 1",descricao ="primeiro produto" , preco = 69, imageurl ="Skate.png"}
             };
 
