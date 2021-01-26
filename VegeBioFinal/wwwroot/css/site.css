@@ -17,6 +17,23 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+div #bannerprodutos {
+    width: 100%;
+    height: 300px;
+    margin-top: -20px;
+    background-position: center;
+    object-fit: cover;
+}
+
+div #headerboasvindas {
+    margin-left: 200px;
+}
+
+div #descricao {
+    margin-left: 200px;
+    margin-top: 30px;
+    height: 560px;
+}
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
